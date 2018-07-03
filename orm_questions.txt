@@ -1,0 +1,30 @@
+1. RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries. It also easily manages the installation of gems and a server for distributing them. 
+
+2.Lazy loading is a design pattern that defers the initialization of an object until the point it's needed.Eager loading differs from this in that it loads all related entities as part of the query.
+
+3. CREATE TABLE creates a new table in a database, and INSERT INTO inserts new records into a table. 
+
+4. Include is used to add methods to an instance of a class and extend is for adding class methods. Extend is public method and include is a private one. 
+
+5. Using an instance method is necessary as we only want to record a change on a particular method and not an entire class. Without doing so will result to unnecessary changes to an entire class.
+
+6. UPDATE character
+   SET name = "Jar-Jar Binks"
+   WHERE id = 1
+   ;
+
+7. I need to reestablish the an updated initialize method, or complete the code in a way that we will connect it to the database created.
+
+8. def snake(snake_word)
+    string = snake_word.gsub(/::/, '/')
+    string.gsub!(/_([a-z])/, capitalize)
+  end   
+
+9. def find_by(attribute, value)
+    row = connection.get_first_row <<-SQL
+      SELECT #{columns.join ","} FROM #{table}
+      WHERE attribute = #{BlocRecord::Utility.sql_strings(value)}
+    SQL
+
+    return find_object(row)
+   end
